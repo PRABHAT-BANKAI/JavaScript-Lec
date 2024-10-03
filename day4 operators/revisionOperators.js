@@ -51,6 +51,7 @@ console.log(!0 && 0 && !1);
 console.log(1 + 1 + "1"+1+1);// 2, "21", "211",2111
 
 let percentage = 45
+
 if(percentage >80){
   console.log("Get bike")
 }else{

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input
+        id="uname"
+        type="text"
+        placeholder="enter user name"
+        onblur="unameValidation()"
+      />
+      <p id="error1"></p>
+      <input
+        id="upassword"
+        type="password"
+        placeholder="enter your password ****"
+        onblur="passwordValidation()"
+      />
+      <p id="error2"></p>
+      <input id="date" type="date" onblur="dateValidation()" />
+      <p id="error3"></p>
+      <!-- <input
+        id="upassword"
+        type="password"
+        placeholder="enter your password ****"
+        onblur="passwordValidation()"
+      />
+      <p id="error2"></p>
+      <input id="date" type="date" onblur="dateValidation()" />
+      <p id="error3"></p>
+      <input
+        id="upassword"
+        type="password"
+        placeholder="enter your password ****"
+        onblur="passwordValidation()"
+      />
+      <p id="error4"></p>
+      <b>Gender</b>
+      male
+      <input id="gender" name="gender" type="radio" onblur="" />
+      female
+      <input id="gender" name="gender" type="radio" />
+      <p id="error5"></p> -->
+
+      <button>Sumbit</button>
+    </form>
+
+    <script>
+      function unameValidation() {
+        const uname = document.getElementById("uname");
+        const error1 = document.getElementById("error1");
+        console.log(uname.value, "value");
+
+        if (uname.value == "") {
+          error1.textContent = "Please enter you username";
+          error1.style.color = "red";
+        }
+      }
+      function passwordValidation() {
+        const password = document.getElementById("upassword");
+        const error2 = document.getElementById("error2");
+
+        if (password.value == "") {
+          error2.textContent = "Please enter you password";
+          error2.style.color = "red";
+        }
+      }
+      function dateValidation() {
+        const date = document.getElementById("date");
+        const error3 = document.getElementById("error3");
+
+        if (date.value == "") {
+          error3.textContent = "Please enter you date";
+          error3.style.color = "red";
+        }
+      }
+      function hobbyValidation() {
+        const hobby = document.getElementById("hobby");
+        const error4 = document.getElementById("error3");
+
+        if (date.value == "") {
+          error4.textContent = "Please enter you date";
+          error4.style.color = "red";
+        }
+      }
+      function emailValidation() {
+        const date = document.getElementById("date");
+        const error5 = document.getElementById("error3");
+
+        if (date.value == "") {
+          error5.textContent = "Please enter you date";
+          error5.style.color = "red";
+        }
+      }
+      function genderValidation() {
+        const date = document.getElementById("date");
+        const error6 = document.getElementById("error3");
+
+        if (date.value == "") {
+          error6.textContent = "Please enter you date";
+          error6.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

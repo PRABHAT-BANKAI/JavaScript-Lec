@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="text">heading1</h1>
+    <p id="text2">heading2</p>
+    <p id="text3">heading3</p>
+    <p id="text4">heading4</p>
+    <p id="text5">heading5</p>
+    <p id="text6">heading6</p>
+    <p id="text7">heading7</p>
+  </body>
+  <script>
+    const textName = document.querySelector("#text");
+    textName.textContent = "textName";
+    console.log(textName);
+    const value = document.querySelectorAll("p");
+    console.log(value);
+    // for (let i = 0; i < value.length; i++) {
+    //   console.log(value[i].innerText);
+    // }
+  </script>
+</html>

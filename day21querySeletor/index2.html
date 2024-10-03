@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #text {
+      }
+    </style>
+  </head>
+  <body>
+    <p>description1</p>
+    <p id="2" class="desc">description2</p>
+    <p id="3" class="desc">description3</p>
+    <p id="4">description4</p>
+
+    <div id="container"></div>
+
+    <button onclick="clickme()" id="click">Clicke me</button>
+
+    <script>
+      console.log("hello world");
+      // console.log(document);
+      // const data = document.getElementById("");
+      // console.log(data.innerText);
+      const container = document.getElementById("container");
+
+      container.innerHTML = " <div><i>descriptionItalic</i></div>";
+
+      const value1 = document.querySelectorAll("p");
+      console.log(value1);
+      for (let i = 0; i < value1.length; i++) {
+        console.log(`sentence ${value1[i].innerText} and id  ${value1[i].id} `);
+      }
+
+      const clickButton = document.getElementById("click");
+      // clickButton.addEventListener("click", function () {
+      //   console.log("click me");
+      // });
+
+      function clickme() {
+        console.log("click me2");
+      }
+
+      const descClass = document.getElementsByClassName("desc");
+      descClass[1].innerHTML = "Click me";
+      console.log(descClass);
+      console.log(descClass[1].innerHTML);
+    </script>
+  </body>
+</html>
