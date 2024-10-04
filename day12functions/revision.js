@@ -70,3 +70,4 @@ const getFunction = outerFunction();
 //   console.log(f + g);
 // }
 // example();
+//
