@@ -1,14 +1,22 @@
 //Data types
+
 //Primitive types
 // Number
 // String
 // Boolean
 // bigInt
+//Symbol
 
-// non primitive
+// non primitive (reference)
 // Array
 // Object
 // function
+let obj1 = {};
+let obj2 = obj1;
+console.log(obj1 === obj2); //true
+let data = { name: "Bruce", hero: "batman" };
+
+
 
 //Nested Function
 // Arrow functions
@@ -99,10 +107,10 @@ function fun() {
 // return
 
 function game() {
-  let a = 1
-  let b = 2
-  console.log("game before return ")
-  return a+b
- console.log("game after return ")
+  let a = 1;
+  let b = 2;
+  console.log("game before return ");
+  return a + b;
+  console.log("game after return ");
 }
 console.log(game());
