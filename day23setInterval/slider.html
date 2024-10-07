@@ -8,17 +8,18 @@
   <body>
     <h1 id="text"></h1>
     <button id="prevButton">previous</button>
-    <button onclick="nextButton()">next</button>
+    <button id="nextButton">next</button>
 
     <script>
       let count = 0;
-      console.log(count, "count");
 
       let array = ["Node", "javscript", "react", "html"];
+      let prevButton = document.getElementById("prevButton");
+      let nextButton = document.getElementById("nextButton");
 
-      let button = document.getElementById("prevButton");
+      prevButton.addEventListener("click", previousButtonFun);// this event call this function by itself
+      nextButton.addEventListener("click", nextButtonFun);
 
-      button.addEventListener("click", previousButton);
       // setInterval(() => {
       //   let text = document.getElementById("text");
       //   text.innerText = array[count];
@@ -28,25 +29,29 @@
       //   }
       // }, 1000);
 
-      let text = document.getElementById("text");
-      text.innerText = array[count];
+      function updateText() {
+        let text = document.getElementById("text");
+        text.innerText = array[count];
+      }
 
-      function previousButton() {
+      function previousButtonFun() {
         count--;
-        console.log(count);
+
         if (count < 0) {
           count = array.length - 1;
         }
+        updateText();
       }
 
-      function nextButton() {
-        console.log("click");
+      function nextButtonFun() {
         count++;
-        console.log(count);
         if (count == array.length) {
           count = 0;
         }
+        updateText();
       }
+
+      updateText();
     </script>
   </body>
 </html>
