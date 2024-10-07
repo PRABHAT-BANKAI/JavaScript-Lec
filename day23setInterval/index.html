@@ -1,2 +1,35 @@
 <!-- Make Coundown Set Timer -->
 <!-- SETTIMEOUT Modal show web page load setInterval, clearinterval Automatic slider -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Count Down</h1>
+    <p></p>
+
+    <script>
+      let number = 10;
+      let array = ["Node", "javscript", "react", "html"];
+      // setTimout()
+      // async nature
+      // setInterval()
+
+      let timerId = setInterval(() => {
+        let text = document.getElementsByTagName("p");
+        text[0].innerHTML = number;
+
+        number--;
+        if (number < 0) {
+          clearInterval(timerId);
+          console.log("stop");
+          text[0].innerHTML = "stop";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

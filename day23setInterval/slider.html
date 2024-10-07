@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="text"></h1>
+    <button id="prevButton">previous</button>
+    <button onclick="nextButton()">next</button>
+
+    <script>
+      let count = 0;
+      console.log(count, "count");
+
+      let array = ["Node", "javscript", "react", "html"];
+
+      let button = document.getElementById("prevButton");
+
+      button.addEventListener("click", previousButton);
+      // setInterval(() => {
+      //   let text = document.getElementById("text");
+      //   text.innerText = array[count];
+      //   count++;
+      //   if (count == array.length ) {
+      //     count = 0;
+      //   }
+      // }, 1000);
+
+      let text = document.getElementById("text");
+      text.innerText = array[count];
+
+      function previousButton() {
+        count--;
+        console.log(count);
+        if (count < 0) {
+          count = array.length - 1;
+        }
+      }
+
+      function nextButton() {
+        console.log("click");
+        count++;
+        console.log(count);
+        if (count == array.length) {
+          count = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

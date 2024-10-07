@@ -6,11 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <h1 id="text"></h1>
     <script>
-      "synchronous";
+      // "synchronous"
       console.log("1");
       console.log("2");
-      ("asynchronous");
+      // "asynchronous"
       setTimeout(function () {
         console.log("Hi from set timeout 1");
       });
@@ -19,6 +20,14 @@
         console.log("Hi from set timeout 2");
       });
       console.log("4");
+
+      let heading = document.getElementById("text");
+
+      setTimeout(showPage, 5000);
+
+      function showPage() {
+        heading.innerText = "welcome to web page...";
+      }
     </script>
   </body>
 </html>
