@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+
+    <button id="store-btn">store</button>
+    <button id="remove-btn">remove</button>
+    <button id="clear-btn">clear</button>
+
+    <a href="./show.html">Show Page</a>
+    <script>
+      function handleStore() {
+        localStorage.setItem("value", "Superman");
+        localStorage.setItem("hero", "Batman");
+      }
+      let storeBtn = document.querySelector("#store-btn");
+      let removeBtn = document.querySelector("#remove-btn");
+      let clearBtn = document.querySelector("#clear-btn");
+
+      storeBtn.addEventListener("click", handleStore);
+
+      removeBtn.addEventListener("click", () => {
+        localStorage.removeItem("value");
+      });
+      clearBtn.addEventListener("click", () => {
+        localStorage.clear();
+      });
+    </script>
+  </body>
+</html>
