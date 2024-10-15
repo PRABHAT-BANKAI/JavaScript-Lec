@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./Data.html">Data page</a>
+    <button>store</button>
+    <button id="clear">clear</button>
+    <script>
+      let userData = {
+        name: "batman",
+        age: 30,
+        city: "Gotham",
+      };
+
+      let btn = document.querySelector("button");
+      let clearBtn = document.getElementById("clear");
+      clearBtn.addEventListener("click", () => {
+        localStorage.clear();
+      });
+
+      btn.addEventListener("click", () => {
+        localStorage.setItem("heroData", JSON.stringify(userData));
+      });
+      console.log(userData.name);
+    </script>
+  </body>
+</html>

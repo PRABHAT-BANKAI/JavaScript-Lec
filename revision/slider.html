@@ -1,0 +1,36 @@
+<!-- View Data from Local storage
+ Delete Record from Local Storage 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="" height="400px" alt="" />
+    <button id="next-btn">next</button>
+    <script>
+      let image = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJDph5eF_cb_crvvK6P8TI1dT4EfNPCuux9A&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ70eUAAXLdPLPX0fJOr5tyoEhM7yoi4viyrwJtkFNS924PWL4yN49z5LqK_Dnwpt3Dvw&usqp=CAU",
+      ];
+      let count = 0;
+
+      function showData() {
+        let display = document.querySelector("img");
+        display.src = image[count];
+      }
+
+      let nextBtn = document.getElementById("next-btn");
+      nextBtn.addEventListener("click", () => {
+        count++;
+        showData();
+      });
+
+      showData();
+    </script>
+  </body>
+</html>

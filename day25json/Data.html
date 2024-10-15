@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <p></p>
+    <h2></h2>
+    <a href="./index.html">home</a>
+    <script>
+      let heroData = JSON.parse(localStorage.getItem("heroData"));
+      console.log(heroData);
+      let head = document.querySelector("h1");
+      let age = document.querySelector("p");
+      let city = document.querySelector("h2");
+      head.innerText = heroData.name;
+      age.innerText = heroData.age;
+      city.innerText = heroData.city;
+    </script>
+  </body>
+</html>
