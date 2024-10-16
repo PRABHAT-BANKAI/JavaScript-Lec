@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="text" type="text" />
+    <button id="add">Add task</button>
+    <div id="task-container"></div>
+    <script>
+      let todoList = JSON.parse(localStorage.getItem("tasks")) || [];
+
+      let textInput = document.getElementById("text");
+      let addBtn = document.getElementById("add");
+      let cont = document.getElementById("task-container");
+
+      addBtn.addEventListener("click", () => {
+        if (textInput.value == "") {
+          alert("Please enter a task");
+          return;
+        }
+        todoList.push(textInput.value);
+        console.log(todoList);
+        showData();
+        textInput.value = "";
+        localStorage.setItem("tasks", JSON.stringify(todoList));
+      });
+
+      function showData() {
+        cont.innerHTML = ""; // clear previous tasks
+
+        todoList.forEach((element, index) => {
+          let paragraph = document.createElement("p");
+          let delBtn = document.createElement("button");
+          let edit = document.createElement("button");
+          edit.innerText = "Edit";
+          delBtn.innerText = "Delete";
+          delBtn.addEventListener("click", () => {
+            todoList = todoList.filter((element, i) => i != index);
+            localStorage.setItem("tasks", JSON.stringify(todoList));
+            showData();
+          });
+          edit.addEventListener("click", () => {
+            let value = prompt();
+
+            todoList.forEach((element, i) => {
+              if (i == index) {
+                todoList[i] = value;
+              }
+            });
+            localStorage.setItem("tasks", JSON.stringify(todoList));
+            showData();
+          });
+          paragraph.innerText = element;
+          cont.append(paragraph, delBtn, edit);
+        });
+      }
+
+      showData();
+    </script>
+  </body>
+</html>
