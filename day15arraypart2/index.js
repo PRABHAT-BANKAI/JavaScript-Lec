@@ -16,6 +16,7 @@ console.log(newArray,"map");
 const filterResult = arr.filter((element) => {
   return element == 10;
 });
+
 console.log(filterResult ,"filter");
 
 let sum = 0;
@@ -29,14 +30,14 @@ console.log(sum);
 
 console.log(foreachValue);
 
-console.log(animals.indexOf("huskey",2))
+console.log(animals.indexOf("huskey",2)) 
 
 
 const index = arr.findIndex((item)=>{
  
  return item > 34
 })
-console.log(index);
+console.log(index); 
 
 
 
