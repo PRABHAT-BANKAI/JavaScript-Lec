@@ -8,6 +8,9 @@ class Animal {
   #makeSound() {
     console.log(`${this.#name} makes ${this.sound}`);
   }
+  makeAnotherSound() {
+    this.#makeSound();
+  }
 }
 
 // let dog = new Animal("tigger", "woof", "pitbull");
