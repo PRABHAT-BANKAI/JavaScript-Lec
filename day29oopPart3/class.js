@@ -1,11 +1,12 @@
 class Animal {
+  #name;
   constructor(name, sound) {
-    this.name = name;
+    this.#name = name;
     this.sound = sound;
   }
 
-  makeSound() {
-    console.log(`${this.name} makes ${this.sound}`);
+  #makeSound() {
+    console.log(`${this.#name} makes ${this.sound}`);
   }
 }
 
@@ -30,4 +31,7 @@ pet.makeSound();
 
 pet.showType();
 
+// console.log(pet.name)
 
+pet.name = "poo";
+pet.makeSound();
