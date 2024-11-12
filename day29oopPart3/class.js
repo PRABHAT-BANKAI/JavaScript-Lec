@@ -37,4 +37,4 @@ pet.showType();
 // console.log(pet.name)
 
 pet.name = "poo";
-pet.makeSound();
+pet.makeAnotherSound();
